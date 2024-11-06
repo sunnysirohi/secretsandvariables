@@ -1,0 +1,13 @@
+on:
+  push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env:
+      var1: "Simple Environemnt Variable"
+    steps:
+      - name: Display the Env Variable
+        run:
+          echo "This variable is defined in Workflow with the value" ${{ env.var1 }}
+      
