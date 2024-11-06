@@ -15,4 +15,8 @@ jobs:
       - name: Display the Repository Variable
         run:
           echo "This repository variable is defined in Workflow with the value -" ${{ vars.NAME }}
+
+      - name: Display the Repository Secret Variable
+        run:
+          echo "This repository secret variable is defined in Workflow with the value -" ${{ secrets.PASSWORD }}
       
