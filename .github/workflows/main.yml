@@ -6,8 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     env:
       var1: "Simple Environemnt Variable"
+    environment: Variables
     steps:
       - name: Display the Env Variable
         run:
-          echo "This variable is defined in Workflow with the value" ${{ env.var1 }}
+          echo "This variable is defined in Workflow with the value -" ${{ env.var1 }}
+
+      - name: Display the Repository Variable
+        run:
+          echo "This repository variable is defined in Workflow with the value -" ${{ vars.NAME }}
       
